@@ -95,6 +95,6 @@ To replicate or run this pipeline, the following environment setups and accounts
 >  **Note on Data Paths:** The PySpark code in this repository utilizes hardcoded AWS S3 URIs (`s3://data-warehouse-project-...`) representing a private cloud landing zone. 
 
 If you wish to execute this Delta Live Tables (DLT) pipeline in your own environment:
-1. Download the public raw CSV files linked in the [Data Source](#data-source) section.
+1. Download the public raw CSV files linked in the Data Source section.
 2. Upload the files to your own **Amazon S3 bucket** (retaining the `source_crm/` and `source_erp/` directory structure).
 3. Update the `.load()` paths in the notebook to match your own S3 bucket URI before running the DLT pipeline.
