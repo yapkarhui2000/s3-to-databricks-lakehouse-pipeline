@@ -43,6 +43,28 @@ This project follows the **Medallion Architecture** approach.
 <img width="1213" height="795" alt="Data_Architecture_Diagram" src="https://github.com/user-attachments/assets/b15c0c18-7af9-4176-b18e-14750e23fa2b" />
 
 ---
+
+##  Data Modeling & Transformation Lineage
+
+As shown in the system lineage diagram (`Screenshot 2026-06-26 231631.png`), the pipeline ingests raw, disparate source files and transforms them into an optimized **Star Schema** data model designed for high-performance analytical querying.
+
+### 🔄 Transformation Workflow Breakdown
+
+1. **Bronze / Raw Layer:** 
+   * Ingested raw source tables including `sales_bronze`, `customer_bronze`, `product_bronze`, and isolated system tables (`loc_a101`, `cust_az12`, `px_cat_g1v2`).
+
+2. **Silver / Refinement Layer:**
+   * **Data Consolidation:** Merged and normalized multiple customer touchpoints (`loc_a101`, `cust_info`, and `cust_az12`) into a single, comprehensive customer dimension table: **`dim_customers`**.
+   * **Product Categorization:** Combined product master details (`prd_info`) with category mappings (`px_cat_g_1_v_2`) to create a unified **`dim_products`** dimension.
+   * **Transactional Cleaning:** Cleaned and structured transactional raw records into **`sales_details`**.
+
+3. **Gold / Analytical Layer (The Star Schema):**
+   * Generated the final centralized **`fact_sales`** table by mapping business transactions from `sales_details` with the corresponding surrogate keys from `dim_customers` and `dim_products`.
+
+### Final Data Model Structure
+* **Fact Table:** `fact_sales` (Stores metrics, quantities, and transaction keys)
+* **Dimension Tables:** `dim_customers`, `dim_products` (Stores descriptive context attributes)
+  
 ##  TechStacks
 
 * **Cloud Storage:** Amazon S3
