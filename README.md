@@ -9,7 +9,7 @@ The data pipeline consists of three parts:
 * **2. Data Ingestion & Processing (Databricks):** Integrated Databricks with AWS S3 to ingest the raw data. Executed robust ETL (Extract, Transform, Load) workloads using PySpark to handle data cleansing, schema enforcement, and structural transformations.
 * **3. BI Availability (Power BI):** Exposed the finalized, optimized data tables directly to Power BI, validating that the pipeline successfully delivers clean, high-performance datasets for reporting.
 
-## Data PipeLine Overview
+## Data Pipeline Overview
 <img width="1245" height="416" alt="Data_Pipeline_Overview" src="https://github.com/user-attachments/assets/fa19fcd7-e498-4f56-a7d5-6633b0973b53" />
 
 The pipeline and runtimes were designed to host on Cloud environments (AWS and DataBricks). This approach ensures a scalable and cost-effective solution for processing data in a timely manner.
