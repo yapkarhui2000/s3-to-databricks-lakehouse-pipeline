@@ -45,9 +45,9 @@ This project follows the **Medallion Architecture** approach.
 ---
 
 ##  Data Modeling & Transformation Lineage
+<img width="588" height="414" alt="Screenshot 2026-06-26 231631" src="https://github.com/user-attachments/assets/1abdc961-dac3-410c-9d4f-1b5c127a4eea" />
 
-As shown in the system lineage diagram (<img width="588" height="414" alt="Screenshot 2026-06-26 231631" src="https://github.com/user-attachments/assets/1abdc961-dac3-410c-9d4f-1b5c127a4eea" />)
-, the pipeline ingests raw, disparate source files and transforms them into an optimized **Star Schema** data model designed for high-performance analytical querying.
+As shown in the system lineage diagram above, the pipeline ingests raw, disparate source files and transforms them into an optimized **Star Schema** data model designed for high-performance analytical querying.
 
 ### 🔄 Transformation Workflow Breakdown
 
