@@ -49,7 +49,7 @@ This project follows the **Medallion Architecture** approach.
 
 As shown in the system lineage diagram above, the pipeline ingests raw, disparate source files and transforms them into an optimized **Star Schema** data model designed for high-performance analytical querying.
 
-### 🔄 Transformation Workflow Breakdown
+###  Transformation Workflow Breakdown
 
 1. **Bronze / Raw Layer:** 
    * Ingested raw source tables including `sales_bronze`, `customer_bronze`, `product_bronze`, and isolated system tables (`loc_a101`, `cust_az12`, `px_cat_g1v2`).
